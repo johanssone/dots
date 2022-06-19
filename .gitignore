@@ -1,0 +1,10 @@
+result
+.direnv
+doc/index.html
+.vscode
+# Result of bud commands
+vm
+iso
+doi
+
+pkgs/_sources/.shake*

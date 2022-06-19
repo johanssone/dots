@@ -1,0 +1,21 @@
+# nvfetcher.toml
+
+[chemacs]
+src.git = "https://github.com/plexus/chemacs2.git"
+fetch.git = "https://github.com/plexus/chemacs2.git"
+
+[fish-nvm]
+src.github = "jorgebucaran/nvm.fish"
+fetch.github = "jorgebucaran/nvm.fish"
+
+[fish-replay]
+src.github = "jorgebucaran/replay.fish"
+fetch.github = "jorgebucaran/replay.fish"
+
+[fzf-scripts]
+src.git = "https://github.com/DanielFGray/fzf-scripts"
+fetch.git = "https://github.com/DanielFGray/fzf-scripts"
+
+[kitty-bortflower-icons]
+src.git = "https://github.com/DinkDonk/kitty-icon.git"
+fetch.git = "https://github.com/DinkDonk/kitty-icon.git"
