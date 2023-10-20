@@ -1,0 +1,9 @@
+keys:
+  - &ekan-age age1tprww8k052xf585lg2xlwqn4r6rjuevwty5u4mvv2pvuzl97fegsha7p74
+  - &ekan-pgp noop
+
+creation_rules:
+  - path_regex: secrets.json$
+    key_groups:
+      - age:
+        - *ekan-age
