@@ -38,9 +38,8 @@
         inputs.treefmt-nix.flakeModule
         inputs.nixos-flake.flakeModule
         ./users
-        #./home
-        #./nixos
-        #./systems/hodgepodge
+        ./home
+        ./nixos
       ];
       flake = {
         # Configurations for Linux (NixOS) systems
@@ -51,7 +50,7 @@
               inputs.sops-nix.nixosModules.sops
               ./systems/hodgepodge
               #./nixos/server/harden.nix
-              #./nixos/docker.nix
+              ./nixos/docker.nix
               #./nixos/lxd.nix
               #./nixos/jenkins.nix
             ];
