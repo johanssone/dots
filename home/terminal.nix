@@ -10,6 +10,9 @@
 
     # Publishing
     asciinema
+
+    # dev
+    devbox
   ];
 
   home.shellAliases = rec {

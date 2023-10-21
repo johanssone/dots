@@ -16,6 +16,7 @@
           ./kitty.nix
           ./nushell.nix
           ./just.nix
+          ./vscode.nix
           # ./powershell.nix
         ];
       };
