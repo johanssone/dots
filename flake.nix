@@ -26,6 +26,10 @@
     nuenv.url = "https://flakehub.com/f/DeterminateSystems/nuenv/0.1.*.tar.gz";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
+    zk-nvim.url = "github:mickael-menu/zk-nvim";
+    zk-nvim.flake = false;
+    coc-rust-analyzer.url = "github:fannheyward/coc-rust-analyzer";
+    coc-rust-analyzer.flake = false;
   };
   
   outputs = inputs@{ self, ... }:
@@ -49,7 +53,7 @@
               ./systems/hodgepodge
               #./nixos/server/harden.nix
               ./nixos/docker.nix
-              #./nixos/lxd.nix
+              ./nixos/lxd.nix
               #./nixos/jenkins.nix
             ];
             services.tailscale.enable = true;

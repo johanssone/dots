@@ -7,15 +7,15 @@
         imports = [
           ./tmux.nix
           ./zsh.nix
-          #./neovim.nix
+          ./neovim.nix
           ./starship.nix
           ./terminal.nix
           ./git.nix
           ./direnv.nix
           #./zellij.nix
-          #./kitty
-          #./nushell.nix
-          #./just.nix
+          ./kitty.nix
+          ./nushell.nix
+          ./just.nix
           # ./powershell.nix
         ];
       };
