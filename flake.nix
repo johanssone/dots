@@ -4,21 +4,18 @@
   inputs = {
 
     # Principle inputs
-    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/*.tar.gz";
+    nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz";
     nixos-hardware.url = "https://flakehub.com/f/NixOS/nixos-hardware/0.1.*.tar.gz";
     home-manager = {
       url = "https://flakehub.com/f/nix-community/home-manager/0.1.*.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     disko = {
       url = "https://flakehub.com/f/nix-community/disko/1.*.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     nixos-flake.url = "github:srid/nixos-flake";
     nix-darwin.url = "github:lnl7/nix-darwin";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
     # secret mgmt
     sops-nix.url = "https://flakehub.com/f/Mic92/sops-nix/0.1.*.tar.gz";
@@ -40,13 +37,14 @@
         ./users
         ./home
         ./nixos
+        #./nix-darwin
       ];
       flake = {
         # Configurations for Linux (NixOS) systems
         nixosConfigurations = {
           hodgepodge = self.nixos-flake.lib.mkLinuxSystem {
             imports = [
-              #self.nixosModules.default # Defined in nixos/default.nix
+              self.nixosModules.default # Defined in nixos/default.nix
               inputs.sops-nix.nixosModules.sops
               ./systems/hodgepodge
               #./nixos/server/harden.nix

@@ -18,13 +18,14 @@
           ];
         };
       };
+
       default.imports = [
         self.nixosModules.home-manager
         self.nixosModules.my-home
         self.nixosModules.common
-        #./self-ide.nix
-        #./ssh-authorize.nix
-        #./current-location.nix
+        ./self-ide.nix
+        ./ssh-authorize.nix
+        ./current-location.nix
       ];
     };
   };

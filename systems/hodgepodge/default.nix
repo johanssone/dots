@@ -23,9 +23,6 @@
   boot.initrd.luks.devices."luks-2190de5b-e347-4475-9f94-4f1d0e3f5d89".device = "/dev/disk/by-uuid/2190de5b-e347-4475-9f94-4f1d0e3f5d89";
   boot.initrd.luks.devices."luks-2190de5b-e347-4475-9f94-4f1d0e3f5d89".keyFile = "/crypto_keyfile.bin";
   
-
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-
   networking.hostName = "hodgepodge"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -35,7 +32,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
+  systemd.services.NetworkManager-wait-online.enable = false;
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
 

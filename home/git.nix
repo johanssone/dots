@@ -28,7 +28,7 @@
       };
     };
     extraConfig = {
-      init.defaultBranch = "main"; # https://srid.ca/unwoke
+      init.defaultBranch = "main"; 
       core.editor = "nvim";
       #protocol.keybase.allow = "always";
       #credential.helper = "store --file ~/.git-credentials";

@@ -1,7 +1,7 @@
 {
   myself = "ekan";
   users = {
-    srid = {
+    ekan = {
       name = "Erik Johansson";
       email = "erik.johansson89@gmail.com";
       sshKeys = [
