@@ -7,6 +7,7 @@
     ripgrep
     fd
     sd
+    comma
 
     # Publishing
     asciinema

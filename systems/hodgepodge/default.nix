@@ -24,6 +24,8 @@
   boot.initrd.luks.devices."luks-2190de5b-e347-4475-9f94-4f1d0e3f5d89".keyFile = "/crypto_keyfile.bin";
   
   networking.hostName = "hodgepodge"; # Define your hostname.
+  networking.nameservers = [ "1.1.1.1" "9.9.9.9" ];
+  networking.extraHosts = "91.106.199.3 kna1-ipa-server01.id.ekan.dev";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -111,6 +113,7 @@
     wget
     git
     direnv
+    helix
     #(vscode-with-extensions.override {
     #  vscodeExtensions = with vscode-extensions; [
     #    bbenoist.nix

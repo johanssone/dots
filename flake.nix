@@ -5,7 +5,7 @@
 
     # Principle inputs
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1.0.tar.gz";
-    nixos-hardware.url = "https://flakehub.com/f/NixOS/nixos-hardware/0.1.*.tar.gz";
+    nixos-hardware.url = "https://flakehub.com/f/NixOS/nixos-hardware/*.tar.gz";
     home-manager = {
       url = "https://flakehub.com/f/nix-community/home-manager/0.1.*.tar.gz";
     };
@@ -18,18 +18,19 @@
     nix-darwin.url = "github:lnl7/nix-darwin";
 
     # secret mgmt
-    sops-nix.url = "https://flakehub.com/f/Mic92/sops-nix/0.1.*.tar.gz";
+    sops-nix.url = "https://flakehub.com/f/Mic92/sops-nix/*.tar.gz";
 
     # Software
-    nixos-shell.url = "https://flakehub.com/f/Mic92/nixos-shell/1.*.tar.gz";
+    nixos-shell.url = "https://flakehub.com/f/Mic92/nixos-shell/*.tar.gz";
     emanote.url = "github:srid/emanote";
-    nuenv.url = "https://flakehub.com/f/DeterminateSystems/nuenv/0.1.*.tar.gz";
+    nuenv.url = "https://flakehub.com/f/DeterminateSystems/nuenv/*.tar.gz";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
     zk-nvim.url = "github:mickael-menu/zk-nvim";
     zk-nvim.flake = false;
     coc-rust-analyzer.url = "github:fannheyward/coc-rust-analyzer";
     coc-rust-analyzer.flake = false;
+    helix.url = "github:helix-editor/helix/23.05";
   };
   
   outputs = inputs@{ self, ... }:
