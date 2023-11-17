@@ -1,0 +1,6 @@
+{ ... }:
+{
+  programs.hyprland = {
+    enableNvidiaPatches = true;
+  }; 
+}

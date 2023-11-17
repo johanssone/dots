@@ -11,9 +11,11 @@
 
     # Publishing
     asciinema
-
     # dev
     devbox
+    virt-manager
+    byobu
+    lens
   ];
 
   home.shellAliases = rec {
